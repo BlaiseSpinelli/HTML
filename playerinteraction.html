@@ -1,0 +1,112 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Marist Football</title>
+<link href="maristfootball.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+function startResponse()
+{
+ 	
+	var answer = 0;
+	var question = " ";
+	var response1 = "I sing opera in the shower so nobody can hear me";
+	var response2 = "I secretly sleep with my socks on ";
+	var response3 = "If I could be any animal, I would be a goldfish";
+	var response4 = "On the weekends I enjoy reading books, especially in the James A. Cannavino Library  ";
+	var response5 = "I never found a date to my senior prom";
+	var response6 = "I facetime my mother every night so she can pick out my outfit for the next day ";
+	var response7 = "I programmed siri to call me 'NightHawk' when I address it ";
+	var response8 = "I was born with 6 toes on my left foot";
+	var response9 = "I literally have $6 in my bank account...";
+	var response10 = "If I cant fall asleep at night I curl up in the fetal position and sing to myself";
+	
+	answer = (Math.floor(Math.random() * 10)) + 1;
+	question = prompt("Would you like to learn an interesting fact about this player?", " ");
+	switch(answer)
+	{
+	 case 1:
+	 document.getElementById("content").innerHTML = response1;
+	 break;
+	 case 2:
+	 document.getElementById("content").innerHTML = response2;
+	 break;
+	 case 3:
+	 document.getElementById("content").innerHTML = response3;
+	 break;
+	 case 4:
+	 document.getElementById("content").innerHTML = response4;
+	 break;
+	 case 5:
+	 document.getElementById("content").innerHTML = response5;
+	 break;
+	 case 6: 
+	 document.getElementById("content").innerHTML = response6;
+	 break;
+	 case 7:
+	 document.getElementById("content").innerHTML = response7;
+	 break;
+	 case 8:
+	 document.getElementById("content").innerHTML = response8;
+	 break;
+	 case 9:
+	 document.getElementById("content").innerHTML = response9;
+	 break;
+	 case 10:
+	 document.getElementById("content").innerHTML = response10;
+	 break;
+	 	}
+}
+</script>
+</head>
+<body>
+<div id="container">
+
+ <img src="teampic.jpg" width="700" height="250" class="floatmiddle" />
+
+ <h1 id="logo"><em>Marist Football </em></h1>
+  
+</div>
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="maristfootball.html">The Den</a>
+    <a href="campsignup.html">Sign up for a Marist Football Camp</a>
+  <a href="redfoxtrivia.html"> Red Fox Trivia</a>
+  <a href="playerinteraction.html">Fun facts about the Marist Football Team</a>
+  <a href= "footballRules.html">Play the Marist Football Simulator</a>
+</div>
+<div id="content">
+<h2 align="center"><em> Fun facts about Marist Football Players!</em></h2>
+	 <p class="floatright">Blaise Spinelli<br /><br />
+	 <img src ="blaise.jpg" width="75" height="75"/></p>
+	 <p>&nbsp;</p>
+	 <p><input type="button" value = "Click here to learn a little about Blaise!" onclick="startResponse();" /></p>
+	 <p>&nbsp;</p>
+	 <p class="floatright">Drew Daniel<br /><br />
+	 <img src ="drew.jpg" width="75" height="75" /></p>
+	 <p>&nbsp;</p>
+	 <p><input type="button" value = "Click here to learn a little about Drew!" onclick="startResponse();" /></p>
+	 <p>&nbsp;</p>
+	 <p class="floatright">Jordan Saunders<br /><br />
+	 <img src ="jordan.jpg" width="75" height="75" /></p>
+	 <p>&nbsp;</p>
+	 <p><input type="button" value = "Click here to learn a little about Jordan!" onclick="startResponse();" /></p>
+	 <p>&nbsp;</p>
+	 <p class="floatright">Anthony Olivencia<br /><br />
+	 <img src ="ao.jpg" width="75" height="75" /></p>
+	 <p>&nbsp;</p>
+	 <p><input type="button" value = "Click here to learn a little about Anthony!" onclick="startResponse();" /></p>
+	 <p>&nbsp;</p>
+	 <p class="floatright">Juston Christian<br /><br />
+	 <img src ="juston.jpg" width="75" height="75" /></p>
+	 <p>&nbsp;</p>
+	 <p><input type="button" value = "Click here to learn a little about Juston!" onclick="startResponse();" /></p>
+	 <p>&nbsp;</p>
+</div>
+
+
+
+<div id="footer">Copyright &copy; Marist Football-Blaise Spinelli, Austin Thiele<br />
+<a href="blaisespinelli@gmail.com, Austin.Thiele1@marist.edu">Blaise.spinelli@gmail.com, Austin.Thiele1@marist.edu</a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Marist Football Game Rules</title>
+  <link href="maristfootball.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <link href="maristfootball.css" rel="stylesheet" type="text/css" />
+  <p>&nbsp;</p>
+<div id="nav">
+  <p><a href="maristfootball.html">Home (the Den)</a>
+    <a href="campsignup.html">Sign up for a Marist Football Camp</a>
+  <a href="redfoxtrivia.html"> Red Fox Trivia</a>
+  <a href="playerinteraction.html">Fun facts about the Marist Football Team</a>
+  <a href= "footballRules.html">Play the Marist Football Simulator</a>
+  </div>
+  
+  
+  
+  <script type="text/javascript">
+  
+  
+  
+  function gameIt()
+  {
+    var offensePlay = 0;
+	var defensePlay = 0;
+	var offensePts = 100;
+	var defensePts = 100;
+	var dodge = "dodge";
+	var block = "the block";
+	var audible = "audible";
+	var offenseChoice = " ";
+	var defenseChoice = " ";
+	document.getElementById("defensePts").innerHTML = (defensePts);
+	document.getElementById("offensePts").innerHTML = (offensePts);
+	document.getElementById("playermove").innerHTML = ("Yourmove: ");
+	document.getElementById("defensemove").innerHTML = ("The defense's move: ");
+	document.getElementById("winner").innerHTML = ("&nbsp;");
+	//  loop repeats until either the player or the defense gets 130 points
+	
+	while ((defensePts < 130) && (offensePts < 130))
+	   {
+    // get the players move
+		  offensePlay = parseInt(prompt("What move do you choose? Enter 1 for dodge (enter 1), 2 for the block, or 3 for the audible: (Enter 4 to forfeit the game at any time)" , " "));
+					if (offensePlay == 4) break;
+    //  get the defenses move
+           defensePlay = Math.floor(Math.random() * 3 + 1);
+    //  assign move to player and defense
+        	if (defensePlay == 1)
+              defenseChoice = dodge;
+            if (defensePlay == 2)
+			  defenseChoice = block;
+			if (defensePlay == 3)
+			  defenseChoice = audible;
+			if (offensePlay == 1)
+			  offenseChoice = dodge;
+			if (offensePlay == 2)
+			  offenseChoice = block;
+			if (offensePlay == 3)
+			  offenseChoice = audible;
+	//  display move selections
+	  document.getElementById("playermove").innerHTML = ("Your move: " + offenseChoice);
+	  document.getElementById("defensemove").innerHTML = ("The defense's move: " + defenseChoice);
+	  alert("Next Down!");
+	// find the winner
+	if (((defensePlay == 1)&&(offensePlay == 3)) || ((defensePlay == 2)&&(offensePlay == 1)) ||  ((defensePlay == 3)&&(offensePlay == 2)))
+	{
+	   document.getElementById("winner").innerHTML = ("<img src='images/footballPlayer.jpg' />");
+	   defensePts = defensePts + 10;
+	   offensePts = offensePts - 10;
+	   document.getElementById("defensePts").innerHTML = (defensePts);
+	   document.getElementById("offensePts").innerHTML = (offensePts);
+	}
+	if (((offensePlay == 1)&&(defensePlay == 3)) || ((offensePlay == 2)&&(defensePlay == 1)) ||  ((offensePlay == 3)&&(defensePlay == 2)))
+	{
+	   document.getElementById("winner").innerHTML = ("<img src='images/endzone.jpg' />");
+	   defensePts = defensePts - 10;
+	   offensePts = offensePts + 10;
+	   document.getElementById("defensePts").innerHTML = (defensePts);
+	   document.getElementById("offensePts").innerHTML = (offensePts);
+	}
+	if (((offensePlay == 1)&&(defensePlay == 1)) || ((offensePlay == 2)&&(defensePlay == 2)) ||  ((offensePlay == 3)&&(defensePlay == 3)))
+	{
+	     document.getElementById("winner").innerHTML = ("This down is a tie. New moves must be chosen....");
+	}
+	   }
+	//  display the final winner
+	if (offensePlay == 4)
+	  document.getElementById("winner").innerHTML = ("Forfeit! Other team wins!");
+	if (defensePts >= 100)
+	  document.getElementById("winner").innerHTML = ("The defense has won the game. Keep training!");
+	if (offensePts >= 100)
+	  document.getElementById("winner").innerHTML = ("You are the champion! Congratulations!");
+  }
+</script>
+
+
+
+<style type="text/css">
+<!--
+.style1 {font-size: 18px}
+-->
+</style>
+
+</head>
+
+<body>
+
+
+<div id="content"><center>
+
+
+<table width = "85%" cellpadding="5" cellspacing="0" border = "0">
+		  <tr><td><center><img src="images/footballPlayer.jpg" width="120" height="168" /></center></td>
+		  <td><center><img src="images/endzone.jpg" width="120" height="168" /></center></td></tr>
+		  
+		  <tr><td><span class="style1">Offense chooses: </span></td>
+		  <td><span class="style1">Defense chooses: </span></td></tr>
+		  
+		  <tr><td id = "playermove" span class="style1">move goes here</span></td>
+		  <td id = "defensemove" span class="style1">move goes here</span></td></tr>
+		  
+		  <tr><td colspan = 2><span class="style1"><font color="Black">The winner is: </font></span></td></tr>
+		  <tr><td colspan = 2 id="winner" align = "center" class="style1">&nbsp;</td></tr>
+		  
+		  <tr><td><span class="style1"><font color="Red">Offense points: </font></span></td> 
+		  <td><span class="style1"><font color="Red">Defense points:</font></span></td></tr>  
+		  
+		  <tr><td class="style1" id = "offensePts">100</td> <td class="style1" id = "defensePts">100</td></tr>
+		  
+		  
+		  <tr><td><input type="button" id="game" value="Let the game begin!" onclick="gameIt();" /> </td>
+		  
+		  <td><input type="button" id="return" value="Return to game instructions" onclick="location.href = 'footballRules.html'"; /></td>
+</table>
+</div></center>
+
+
+
+<a href="mailto:Austin.Thiele1@marist.edu, Blaise.Spinelli1@marist.edu"</a></div>
+</div>
+</div>
+</body>
+</html>

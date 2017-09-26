@@ -1,0 +1,151 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Marist Football</title>
+<link href="maristfootball.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	//textbox functions for the registration information
+	function getRealName(realname)
+	{
+	var real = document.getElementById(realname).value;
+	document.getElementById('real_name').innerHTML = real;
+	}
+	function getPosition(position)
+	{
+	var camper = document.getElementById(position).value;
+	document.getElementById('camper_position').innerHTML = camper;
+	}
+	function getYear(year)
+	{
+	var pts = document.getElementById(year).value;
+	document.getElementById('camper_year').innerHTML = pts;
+	}
+	
+	//radio button functions for the skill you would like to enhance
+	function pickSkill(theskill)
+	{
+	var skill = document.getElementById(theskill).value;
+	document.getElementById('myskill').innerHTML = skill;
+	document.getElementById('skill_img').innerHTML = ("<img src ='images/" + skill + ".jpg' />");
+	}
+	
+	//checkbox functions for the events you would like to be tested in
+	function pickEvents()
+	{
+	var i = 0; var j = 0; var k = 0;
+	var event1 = ""; var event2 = ""; var event3 = "";
+	for (i=0; i <= 9; i++)
+	{
+	if (document.getElementById('w'+ i).checked == true)
+	{
+	event1 = document.getElementById('w'+ i).value;
+	document.getElementById('event_one').innerHTML = event1;
+	break;
+	}
+	}
+	for (j=(i+1); j <=9; j++)
+	{
+	if (document.getElementById('w'+ j).checked == true)
+	{
+	event2 = document.getElementById('w'+ j).value;
+	document.getElementById('event_two').innerHTML = event2;
+	break;
+	}
+	}
+	for (k=(j+1); k <=9; k++)
+	{
+	if (document.getElementById('w'+ k).checked == true)
+	{
+	event3 = document.getElementById('w'+ k).value;
+	document.getElementById('event_three').innerHTML = event3;
+	}
+	}
+	}
+	
+	</script>
+	
+</head>
+
+<body>
+<div id="container">
+  <img src="teampic.jpg" width="700" height="250" class="floatmiddle" />
+
+ <h1 align="center"><em>Marist Football Camp Sign up</em></h1>
+
+<div style ="clear:both;"></div>  
+<div id="nav">
+  <p><a href="maristfootball.html">Home (the Den)</a>
+    <a href="campsignup.html">Sign up for a Marist Football Camp</a>
+  <a href="redfoxtrivia.html"> Red Fox Trivia</a>
+  <a href="playerinteraction.html">Fun facts about the Marist Football Team</a>
+  <a href= "footballRules.html">Play the Marist Football Simulator</a>
+</div>
+
+<div id="content">
+	<h2><br />Your chance to be a Red Fox for a day</h2>
+	<div><div><form name = "inventory">
+	<fieldset><h3>As you enter the following information please click the corresponding submit buttons so your information is saved into our database:</h3>
+	
+	<p><label>Your name:<br /></label>
+	<input type="text" id="realname" size = "50" value = ""/>
+	<input type ="button" onclick="getRealName('realname')"value = "Submit your name"></button></p>
+	
+	<p><label>Your position:<br /> </label>
+	<input type="text" id="position" size="50" value = ""/>
+	<input type ="button" onclick="getPosition('position')" value = "Submit your position"></button></p>
+
+	<p><label>Current class year:<br /></label>
+	<input type="text" id="year" size = "50" value = ""/>
+	<input type ="button" onclick="getYear('year')" value = "Submit your class"></button></p>
+	
+	</fieldset></div><div style="clear:both;"></div>
+	<div> <table width = "100%" border = "2"> <br />
+	<tr><td colspan = "5" class = "nobdr"><h3>What skill you wish to enhance at the camp</h3></td></tr>
+	<tr><td class="nobdr"><img src="images/strength.jpg" width="75" height="75" />Strength</td>
+	<td class="nobdr"> <img src="images/speed.jpg" width="75" height="75"/>Speed</td>
+	<td class="nobdr"> <img src="images/explosive.jpg" width="75" height="75"/>Explosiveness</td>
+	<td class="nobdr"><img src="images/brains.jpg" width="75" height="75"/>Football IQ</td>
+	<td class="nobdr"><img src="images/stamina.jpg" width="75" height="75"/>Stamina</td></tr>
+	
+	<tr><td class="nobdr"><input type = "radio" name = "skill" id = "strength" value = "strength" onclick="pickSkill('strength')"/></td>
+	<td class="nobdr"><input type = "radio" name = "skill" id = "speed" value = "speed" onclick = "pickSkill('speed')"/></td>
+	<td class="nobdr"><input type = "radio" name = "skill" id = "explosive" value = "explosive" onclick="pickSkill('explosive')"/> </td>
+	<td class="nobdr"><input type = "radio" name = "skill" id = "brains" value = "brains" onclick="pickSkill('brains')"/></td>
+	<td class="nobdr"><input type = "radio" name = "skill" id = "stamina" value = "stamina" onclick="pickSkill('stamina')"/> </td></tr>
+	</table>
+	
+	<fieldset>
+	<h3>Select three events you would like to be tested in</h3>
+	<input type="checkbox" name="events" id="w0" value="40 Yard Dash" />40 Yard Dash<br />
+	<input type="checkbox" name="events" id="w1" value="Shuttle Run" />Shuttle Run<br />
+	<input type="checkbox" name="events" id="w2" value="Broad Jump" />Broad Jump<br />
+	<input type="checkbox" name="events" id="w3" value="Vertical Jump" />Vertical Jump<br />
+	<input type="checkbox" name="events" id="w4" value="225 Bench Press" />225 Bench Press<br />
+	<input type="checkbox" name="events" id="w5" value="L Cone Drill" />L Cone Drill<br />
+	<input type="checkbox" name="events" id="w6"value="100 Yard Dash" />100 Yard Dash<br />
+	<input type="checkbox" name="events" id="w7" value="Triple Jump" />Triple Jump<br />
+	<input type="checkbox" name="events" id="w8" value="Powerball Toss" />Powerball Toss<br />
+	<input type="checkbox" name="events" id="w9" value="300 Yard shuttle" />300 Yard shuttle<br />
+	<input type ="button" onclick="pickEvents()" value = "Enter my selections" /></button></fieldset></div>
+	<div style = "width: 110%; float: middle;">
+	</fieldset></div><div style="clear:both;"></div>
+
+	
+	<h3>Your information<br />
+	<br>Your name: <span id = "real_name">&nbsp;</span> <br /><br />
+	<br>Your position: <span id = "camper_position">&nbsp;</span> <br /><br />
+	<br>Current Class Year: <span id = "camper_year">&nbsp;</span> <br /><br />
+	<br>Football Skill enhanced: <span id = "myskill">&nbsp;</span> <span id ="skill_img">&nbsp;</span><br /> <br />
+	
+	Events:<br />
+	<br><span id = "event_one">&nbsp;</span> <br />
+	<br><span id = "event_two">&nbsp;</span><br />
+	<br><span id = "event_three">&nbsp;</span> <br /><br />
+	</div></form><div style="clear:both;"></div>
+ 
+ </div>
+<div id="footer">Copyright &copy; Marist Football-Blaise Spinelli, Austin Thiele<br />
+<a href="blaisespinelli@gmail.com, Austin.Thiele1@marist.edu">Blaise.spinelli@gmail.com, Austin.Thiele1@marist.edu</a></div></div>
+</div>
+</body>
+</html>
